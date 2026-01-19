@@ -12,15 +12,32 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@gitlab.com/qbitflow1/backend.git"
+		"url": "git+ssh://git@github.com:QBitFlow/qbitflow-evm-contracts.git"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": [
+		"qbitflow",
+		"cryptocurrency",
+		"crypto",
+		"payment",
+		"payment-processing",
+		"api",
+		"sdk",
+		"bitcoin",
+		"solana",
+		"ethereum",
+		"blockchain",
+		"subscription",
+		"payment-gateway",
+		"recurring-billing",
+		"api-client",
+		"typescript"
+	],
+	"author": "QBitFlow",
+	"license": "MPL-2.0",
 	"bugs": {
-		"url": "https://gitlab.com/qbitflow1/backend/issues"
+		"url": "https://github.com:QBitFlow/qbitflow-evm-contracts.git/issues"
 	},
-	"homepage": "https://gitlab.com/qbitflow1/backend#readme",
+	"homepage": "https://github.com:QBitFlow/qbitflow-evm-contracts.git#readme",
 	"devDependencies": {
 		"@nomicfoundation/hardhat-toolbox": "^6.1.0",
 		"@nomicfoundation/solidity-analyzer-darwin-arm64": "^0.1.2",

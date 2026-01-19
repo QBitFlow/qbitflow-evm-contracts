@@ -1,0 +1,34 @@
+{
+	"name": "qbitflow-evm-contracts",
+	"version": "1.0.0",
+	"description": "QBitFlow is a decentralized payment system that enables non-custodial one-time payments and recurring subscriptions on Ethereum. Built with security and user experience in mind, QBitFlow allows users to pay in ERC20 tokens without holding ETH for gas fees, through an innovative gas refund mechanism.",
+	"main": "index.js",
+	"directories": {
+		"test": "tests"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"deploy-test": "HARDHAT_NETWORK=localhost node scripts/deploy-local.js .env.development"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@gitlab.com/qbitflow1/backend.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://gitlab.com/qbitflow1/backend/issues"
+	},
+	"homepage": "https://gitlab.com/qbitflow1/backend#readme",
+	"devDependencies": {
+		"@nomicfoundation/hardhat-toolbox": "^6.1.0",
+		"@nomicfoundation/solidity-analyzer-darwin-arm64": "^0.1.2",
+		"@openzeppelin/contracts": "^5.4.0",
+		"ethers": "^6.15.0"
+	},
+	"dependencies": {
+		"dotenv": "^17.2.2",
+		"solc": "^0.8.30"
+	}
+}

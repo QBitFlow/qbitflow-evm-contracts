@@ -12,6 +12,7 @@ test-accounts.txt
 artifacts/
 cache/
 
+test/
 
 
 .env.development

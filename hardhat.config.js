@@ -39,6 +39,7 @@ module.exports = {
 				auto: false, // disable automine
 				interval: 1000, // mine every 1000 ms (1s)
 			},
+		},
 	},
 	// etherscan: {
 	// 	apiKey: process.env.ETHEREUM_ETHERSCAN_API_KEY, // optional for verification

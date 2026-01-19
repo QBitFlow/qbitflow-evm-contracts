@@ -7,6 +7,8 @@
 
 🌐 **Website:** [qbitflow.app](https://qbitflow.app)
 
+**Deployed Contract Address:** [`0x843D775050522739c0b8F8c832549F81C2151E0C`](https://etherscan.io/address/0x843D775050522739c0b8F8c832549F81C2151E0C)
+
 ## 📋 Overview
 
 QBitFlow is a decentralized payment system that enables **non-custodial** one-time payments and recurring subscriptions on Ethereum. Built with security and user experience in mind, QBitFlow allows users to pay in ERC20 tokens without holding ETH for gas fees, through an innovative gas refund mechanism.
@@ -106,8 +108,8 @@ Backend → QBitFlowPaymentSystem
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/qbitflow-contracts.git
-cd qbitflow-contracts/eth
+git clone https://github.com/QBitFlow/qbitflow-evm-contracts.git
+cd qbitflow-evm-contracts/eth
 
 # Install dependencies
 npm install
@@ -372,47 +374,6 @@ The contracts can be deployed on any EVM-compatible network:
 - Avalanche
 - BSC
 
-## 🛠️ Integration Example
-
-### Frontend Integration
-
-```javascript
-import { ethers } from 'ethers';
-import QBitFlowABI from './abi/QBitFlowPaymentSystem.abi';
-
-// Initialize contract
-const provider = new ethers.providers.Web3Provider(window.ethereum);
-const signer = provider.getSigner();
-const qbitflow = new ethers.Contract(CONTRACT_ADDRESS, QBitFlowABI, signer);
-
-// Create a subscription
-const data = {
-    from: userAddress,
-    to: merchantAddress,
-    amount: ethers.utils.parseUnits('100', 6), // 100 USDC
-    tokenAddress: USDC_ADDRESS,
-    uuid: ethers.utils.randomBytes(16)
-};
-
-const permitParams = {
-    allowance: ethers.utils.parseUnits('1000', 6),
-    deadline: Math.floor(Date.now() / 1000) + 3600,
-    spender: proxyAddress
-    // ... signature data
-};
-
-await qbitflow.createSubscription(
-    data,
-    ethers.utils.parseUnits('150', 6), // maxAmount
-    2592000, // 30 days
-    permitParams,
-    true, // permitSupported
-    ethers.constants.AddressZero, // no org fee
-    signature,
-    gasRefundData
-);
-```
-
 ## 📄 License
 
 This project is licensed under the [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0).
@@ -422,7 +383,7 @@ This project is licensed under the [Mozilla Public License 2.0](https://opensour
 
 - **Website**: [qbitflow.app](https://qbitflow.app)
 - **Documentation**: [qbitflow.app/docs](https://qbitflow.app/docs)
-- **Issues**: [GitHub Issues](https://github.com/QBitFlow/qbitflow-contracts/issues)
+- **Issues**: [GitHub Issues](https://github.com/QBitFlow/qbitflow-evm-contracts/issues)
 
 
 ## 🔮 Roadmap

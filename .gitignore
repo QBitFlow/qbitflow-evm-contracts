@@ -18,3 +18,5 @@ cache/
 .env.production
 .env.test
 
+scripts/send-sepolia.js
+scripts/signatures.js

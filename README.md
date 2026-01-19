@@ -117,8 +117,6 @@ npm install
 # Compile contracts
 npx hardhat compile
 
-# Run tests
-npx hardhat test
 
 # Deploy to local network
 npx hardhat node
@@ -310,31 +308,6 @@ organizationFee = ((amount - ownerFee) * orgFeeBps) / 10000
 merchantAmount = amount - ownerFee - organizationFee
 ```
 
-## 🧪 Testing
-
-The contracts include comprehensive test coverage:
-
-```bash
-# Run all tests
-npx hardhat test
-
-# Run specific test file
-npx hardhat test test/subscription.permit.spec.js
-
-# Run with gas reporting
-REPORT_GAS=true npx hardhat test
-```
-
-### Test Files
-- `payment.approval.js` - One-time payments with approval
-- `payment.permit.spec.js` - One-time payments with permit
-- `subscription.approval.spec.js` - Subscriptions with approval
-- `subscription.permit.spec.js` - Subscriptions with permit
-- `payg-subscription.spec.js` - Pay-as-you-go subscriptions
-- `proxyFactory.spec.js` - Proxy factory operations
-- `gasRefund.spec.js` - Gas refund mechanism
-- `other.js` - Edge cases and utilities
-
 ## 📜 Deployment
 
 ### Local Deployment
@@ -343,16 +316,7 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 
 # Deploy contracts
-npm run deploy-test
-```
-
-### Testnet Deployment
-```bash
-# Deploy to Sepolia
-npx hardhat run scripts/deploy.js --network sepolia
-
-# Verify on Etherscan
-npx hardhat verify --network sepolia <CONTRACT_ADDRESS>
+npm run deploy-test <co-signer-address>
 ```
 
 ### Deployment Outputs

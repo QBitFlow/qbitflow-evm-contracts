@@ -32,13 +32,13 @@ module.exports = {
 				? [process.env.ETHEREUM_CONTRACT_OWNER_WALLET_PRIVATE_KEY]
 				: [],
 		},
-		// localhost: {
-		// 	url: "http://127.0.0.1:8545",
-		// 	chainId: 1337,
-		// 	mining: {
-		// 		auto: false, // disable automine
-		// 		interval: 1000, // mine every 1000 ms (1s)
-		// 	},
+		localhost: {
+			url: "http://127.0.0.1:8545",
+			chainId: 1337,
+			mining: {
+				auto: false, // disable automine
+				interval: 1000, // mine every 1000 ms (1s)
+			},
 	},
 	// etherscan: {
 	// 	apiKey: process.env.ETHEREUM_ETHERSCAN_API_KEY, // optional for verification
